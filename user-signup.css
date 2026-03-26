@@ -1,32 +1,35 @@
+/* 1. Global Reset & Body */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* This prevents padding from breaking widths */
 }
 
 body {
     background: #f2f2f2;
-
+    font-family: sans-serif;
 }
 
+/* 2. Navigation - Made Fluid */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 10;
+    background: #2563eb; /* Move background here for continuity */
+    width: 100%;
 }
 
 nav .top {
     width: 100%;
-    height: 80px;
+    max-width: 1200px; /* Limits width on big screens */
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2563eb;
-    padding: 30px 40px;
-    border: 1px solid black;
+    padding: 10px 40px;
 }
 
 nav .top p {
@@ -37,10 +40,8 @@ nav .top p {
 
 nav .link {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 40px;
-
+    gap: 30px;
 }
 
 nav .link a {
@@ -50,245 +51,143 @@ nav .link a {
 }
 
 nav .link button {
-    display: flex;
+    background: white;
     border-radius: 15px;
     border: none;
+    overflow: hidden;
 }
 
 nav .link button a {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    justify-items: center;
-    background: white;
     color: #2563eb;
-    font-size: 16px;
     font-weight: 600;
     width: 100px;
     height: 40px;
-    border-radius: 15px;
 }
 
+/* 3. The Container - The "Anti-Scattering" Fix */
 .container {
-    width: 850px;
+    max-width: 850px; /* Changed from width to max-width */
+    width: 95%;      /* Allow it to be smaller than 850px on tablets */
     display: flex;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin: 40px auto;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* 4. Left Section (Image) */
 .container .left {
-    width: 50%;
+    flex: 1; /* Automatically takes up 50% */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url(images/image1.jpg);
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/image1.jpg);
+    background-size: cover;
+    background-position: center;
     position: relative;
+    padding: 20px;
 }
 
-
-.container .left::before {
+/* Decorative shapes - Hidden on mobile later for space */
+.container .left::before, .container .left::after {
     content: "";
-    width: 200px;
-    height: 40px;
-    background: #00d4ff;
     position: absolute;
     border-radius: 50px;
-    top: 80px;
-    left: 40px;
     opacity: .6;
 }
+.container .left::before { width: 150px; height: 35px; background: #00d4ff; top: 40px; left: 20px; }
+.container .left::after { width: 180px; height: 35px; background: #1e90ff; bottom: 40px; right: 20px; }
 
-.container .left::after {
-    content: "";
-    width: 250px;
-    height: 40px;
-    background: #1e90ff;
-    position: absolute;
-    border-radius: 50px;
-    bottom: 100px;
-    right: 30px;
-    opacity: .5;
-}
-
-
-.container .left h1 {
-    font-size: 35px;
-    letter-spacing: 2px;
-}
-
-.container .left p {
-    margin-top: 10px;
-}
-
-
+/* 5. Right Section (Form) */
 .container .right {
-    width: 50%;
+    flex: 1; /* Automatically takes up 50% */
     padding: 40px;
 }
 
-.container .right h2 {
-    margin-bottom: 5px;
-    font-weight: 400;
-    text-align: center;
-}
+.container .right h2 { margin-bottom: 5px; text-align: center; }
+.container .right p { color: gray; font-size: 12px; margin-bottom: 20px; text-align: center; }
 
-.container .right p {
-    color: gray;
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.container .right label{
+.container .right label {
+    display: block;
     font-size: 14px;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .container .right .input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 16px; /* Prevents auto-zoom on iPhones */
 }
 
-.container .password {
-    position: relative;
-}
+.container .check { display: flex; gap: 10px; font-size: 12px; margin-bottom: 20px; }
 
-.container .password i {
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    color: gray;
-}
-
-.container .check {
-    font-size: 12px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.container button {
+.container button[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #2c66d6;
     border: none;
     color: white;
     border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
 }
 
+.container .or { text-align: center; font-size: 12px; margin: 20px 0; color: gray; }
+.container .google { display: flex; justify-content: center; }
+.container .google img { width: 35px; cursor: pointer; }
 
-.container .or {
-    text-align: center;
-    font-size: 12px;
-    margin: 20px 0;
-    color: gray;
-}
+/* --- 6. Mobile Responsiveness --- */
 
-.container .google {
-    display: flex;
-    justify-content: center;
-}
-
-.container .google img {
-    width: 35px;
-    margin-bottom: 15px;
-}
-
-.login-link a{
-    color: #464646;
-}
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  nav .top {
-    height: auto;
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
-  }
+    nav .top {
+        padding: 15px 20px;
+    }
+    
+    nav .link { gap: 15px; }
 
-  nav .link {
-    gap: 15px;
-  }
+    .container {
+        flex-direction: column; /* Stack image on top of form */
+        margin-top: 20px;
+    }
 
-  .container {
-    width: 90vw;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-direction: column;
-  }
+    .container .left {
+        width: 100%;
+        min-height: 200px; /* Show part of the image as a header */
+    }
+    
+    .container .left::before, .container .left::after {
+        display: none; /* Remove floating shapes on mobile */
+    }
 
-  .container .left {
-    display: none;
-  }
-
-  .container .right {
-    width: 100%;
-    padding: 30px 20px;
-  }
-
-  .container .right h2 {
-    font-size: 20px;
-  }
-
-  .container button {
-    padding: 8px;
-  }
+    .container .right {
+        width: 100%;
+        padding: 30px 20px;
+    }
 }
 
 @media (max-width: 480px) {
-  nav .top {
-    padding: 10px 15px;
-  }
+    nav .top {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 
-  nav .top p {
-    font-size: 16px;
-  }
+    .container {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
 
-  nav .link button a {
-    width: 80px;
-    height: 35px;
-    font-size: 14px;
-  }
-
-  .container {
-    width: 100%;
-    border-radius: 0;
-    margin: 15px 0;
-  }
-
-  .container .right {
-    padding: 20px 15px;
-  }
-
-  .container .right h2 {
-    font-size: 18px;
-  }
-
-  .container .input {
-    padding: 8px !important;
-    font-size: 14px;
-  }
-
-  .container .check {
-    font-size: 11px;
-  }
-
-  .container .google img {
-    width: 30px;
-  }
+    .container .right h2 { font-size: 22px; }
 }
