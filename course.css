@@ -153,3 +153,88 @@ body {
   font-size: 16px;
   list-style: none;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .course {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .course-card,
+  .review-card,
+  .about-card {
+    width: 100%;
+  }
+
+  .about-card {
+    height: auto;
+  }
+
+  .lesson-item {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .small-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 8px 15px;
+  }
+
+  .course-card,
+  .review-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-card h3,
+  .about-card h4 {
+    font-size: 18px;
+  }
+
+  .about-card p {
+    font-size: 14px;
+  }
+}

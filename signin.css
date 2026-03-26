@@ -5,3 +5,53 @@
 .container .right .input {
     margin-bottom: 30px;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .container .left {
+    display: none;
+  }
+
+  .container .right {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .container .right h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .container .right {
+    padding: 20px 15px;
+  }
+
+  .container .right h2 {
+    font-size: 18px;
+  }
+
+  .container .input {
+    padding: 8px !important;
+    font-size: 14px;
+  }
+
+  .container button {
+    padding: 8px;
+  }
+}

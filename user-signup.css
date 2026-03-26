@@ -210,3 +210,85 @@ nav .link button a {
 .login-link a{
     color: #464646;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav .top {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav .link {
+    gap: 15px;
+  }
+
+  .container {
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .container .left {
+    display: none;
+  }
+
+  .container .right {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .container .right h2 {
+    font-size: 20px;
+  }
+
+  .container button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .top {
+    padding: 10px 15px;
+  }
+
+  nav .top p {
+    font-size: 16px;
+  }
+
+  nav .link button a {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 0;
+    margin: 15px 0;
+  }
+
+  .container .right {
+    padding: 20px 15px;
+  }
+
+  .container .right h2 {
+    font-size: 18px;
+  }
+
+  .container .input {
+    padding: 8px !important;
+    font-size: 14px;
+  }
+
+  .container .check {
+    font-size: 11px;
+  }
+
+  .container .google img {
+    width: 30px;
+  }
+}

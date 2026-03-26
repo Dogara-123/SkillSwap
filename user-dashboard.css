@@ -241,3 +241,125 @@ td {
   font-size: 12px;
   display: inline-block;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .menu li {
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .bottom {
+    margin-top: 20px;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .course-grid {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .course-card {
+    width: calc(50% - 7.5px);
+    min-width: 150px;
+  }
+
+  .profile-card,
+  .schedule {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .profile img {
+    width: 35px;
+    height: 35px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .course-grid {
+    flex-direction: column;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+
+  .stats {
+    gap: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  td,
+  th {
+    padding: 8px 0;
+  }
+}

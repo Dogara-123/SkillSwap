@@ -653,3 +653,195 @@ nav .link button a {
     color: #555;
     font-size: 14px;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav .top {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav .link {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  nav .link button a {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .hero-section .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-section .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-section .hero-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .about {
+    padding: 30px 20px;
+  }
+
+  .about h4,
+  .about h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about .about-container {
+    flex-direction: column;
+  }
+
+  .about .about-images img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .about .about-text {
+    width: 100%;
+  }
+
+  .about .stats {
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 0;
+  }
+
+  .services {
+    padding: 50px 20px;
+  }
+
+  .services .service-cards {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .services .card {
+    width: 100%;
+  }
+
+  .why {
+    padding: 30px 20px;
+  }
+
+  .why-container {
+    flex-direction: column;
+  }
+
+  .why-left img {
+    width: 100% !important;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-columns {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .top {
+    padding: 8px 12px;
+  }
+
+  nav .top p {
+    font-size: 16px;
+  }
+
+  nav .link a {
+    font-size: 13px;
+  }
+
+  nav .link button a {
+    width: 70px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .hero-section {
+    padding: 20px 15px;
+  }
+
+  .hero-section .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-section .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-section .buttons button {
+    padding: 8px 15px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .about {
+    padding: 20px 15px;
+  }
+
+  .about h2 {
+    font-size: 20px;
+  }
+
+  .about h4,
+  .about .about-text h3 {
+    font-size: 16px;
+  }
+
+  .about .about-text p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .services {
+    padding: 30px 15px;
+  }
+
+  .services h1 {
+    font-size: 20px;
+  }
+
+  .services .card {
+    padding-bottom: 0;
+  }
+
+  .services .card-content {
+    height: auto;
+  }
+
+  .why {
+    padding: 20px 15px;
+  }
+
+  .why h1 {
+    font-size: 20px;
+  }
+
+  .cta-box {
+    padding: 20px 15px;
+  }
+
+  .footer-columns {
+    gap: 15px;
+  }
+}

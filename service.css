@@ -155,3 +155,89 @@ button:hover {
     text-align: center;
     margin-top: 20px;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .main {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topbar input {
+    width: 100%;
+  }
+
+  .courses-page {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .course-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .course-header img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .reviews,
+  .about {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+
+  .course-header {
+    padding: 15px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px 10px;
+  }
+}

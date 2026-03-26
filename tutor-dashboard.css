@@ -219,3 +219,111 @@ body {
   background: #2d63ff;
   border-radius: 5px;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .menu li {
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .title-card,
+  .about,
+  .course {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about-card,
+  .skills,
+  .course-title {
+    width: 100%;
+    flex: 1;
+  }
+
+  .course-grid {
+    flex-direction: column;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .search {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .profile img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .course-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .course-grid {
+    gap: 10px;
+  }
+
+  .review {
+    padding: 8px;
+  }
+}

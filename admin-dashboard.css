@@ -208,3 +208,102 @@ body {
   font-size: 13px;
   cursor: pointer;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 15px 0;
+  }
+
+  .logo {
+    font-size: 18px;
+    padding: 0 15px 15px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0 15px;
+  }
+
+  .menu-item {
+    padding: 10px 15px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .overview {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card .num {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .menu {
+    padding: 0;
+    gap: 0;
+  }
+
+  .menu-item {
+    flex: 1;
+    padding: 8px 10px;
+    text-align: center;
+  }
+
+  .chart-section {
+    padding: 10px;
+  }
+
+  .list-card {
+    padding: 12px;
+  }
+}
