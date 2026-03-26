@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSwap Dashboard</title>
+  <link rel="stylesheet" href="admin-dashboard.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6dcf7565b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="logo">SkillSwap</div>
+
+      <div class="menu">
+
+        <div class="menu-item active"><i class="fa-solid fa-border-all"></i>Dashboard</div>
+        <div class="menu-item"><i class="fa-solid fa-user-tie"></i>Tutors</div>
+        <div class="menu-item"><i class="fa-solid fa-users"></i>Students</div>
+        <div class="menu-item"><i class="fa-solid fa-book"></i>Courses</div>
+        <div class="menu-item"><i class="fa-solid fa-wallet"></i>Payments</div>
+        <div class="menu-item"><i class="fa-solid fa-chart-pie"></i>Reports</div>
+
+      </div>
+
+      <div class="menu-item-bottom">
+        <div class="menu-item"><i class="fa-solid fa-gear"></i>Settings</div>
+        <div class="menu-item"><i class="fa-solid fa-right-from-bracket"></i>Logout</div>
+      </div>
+    </div>
+
+    <div class="main">
+
+      <div class="top-nav">
+        <div class="search-box">
+          <input type="text" placeholder="Search here" />
+        </div>
+
+        <div class="top-right">
+          <i class="fa-solid fa-gear"></i>
+          <div class="profile-img"></div>
+        </div>
+      </div>
+
+      <div class="title">Welcome back, Admin!</div>
+
+      <div class="overview">
+        <div class="card blue">
+          <div class="label">Total Users</div>
+          <div class="num">100</div>
+        </div>
+        <div class="card orange">
+          <div class="label">Total Tutors</div>
+          <div class="num">25</div>
+        </div>
+        <div class="card green">
+          <div class="label">Active Courses</div>
+          <div class="num">30</div>
+        </div>
+        <div class="card purple">
+          <div class="label">Revenue</div>
+          <div class="num">₦750,000</div>
+        </div>
+      </div>
+
+
+      <div class="chart-section">
+        <div class="chart-header">
+          <span>Revenue (Last 2 Months)</span>
+          <span class="view-btn">View Report</span>
+        </div>
+
+        <img src="images/Frame 182.png" alt="chart" class="chart-img">
+      </div>
+
+      <div class="grid">
+
+        <div class="list-card">
+          <h3>Recent User Registrations <span class="view-btn">View All</span></h3>
+
+          <div class="user-item">
+            <div class="user-left">
+              <img src="https://i.pravatar.cc/40?img=1" alt="">
+              <div>
+                <strong>Emily Johnson</strong><br>
+                <span>Joined Yesterday</span>
+              </div>
+            </div>
+            <span>Yesterday</span>
+          </div>
+
+          <div class="user-item">
+            <div class="user-left">
+              <img src="https://i.pravatar.cc/40?img=2" alt="">
+              <div>
+                <strong>Garba Joshua</strong><br>
+                <span>Joined Yesterday</span>
+              </div>
+            </div>
+            <span>Yesterday</span>
+          </div>
+
+          <div class="user-item">
+            <div class="user-left">
+              <img src="https://i.pravatar.cc/40?img=3" alt="">
+              <div>
+                <strong>Seth Dogara</strong><br>
+                <span>Joined Yesterday</span>
+              </div>
+            </div>
+            <span>2 Hours Ago</span>
+          </div>
+
+          <div class="user-item">
+            <div class="user-left">
+              <img src="https://i.pravatar.cc/40?img=3" alt="">
+              <div>
+                <strong>Martins John</strong><br>
+                <span>Joined Yesterday</span>
+              </div>
+            </div>
+            <span>30 Mins Ago</span>
+          </div>
+
+          <div class="user-item">
+            <div class="user-left">
+              <img src="https://i.pravatar.cc/40?img=3" alt="">
+              <div>
+                <strong>Samson Gungret</strong><br>
+                <span>Joined yesterday</span>
+              </div>
+            </div>
+            <span>12 Hours Ago</span>
+          </div>
+
+        </div>
+
+        <div class="list-card">
+          <h3>Recent Tutors <span>View All</span></h3>
+
+          <div class="tutor-item">
+            <div class="tutor-left">
+              <img src="https://i.pravatar.cc/40?img=5" alt="">
+              <div>
+                <strong>Amanda Gabriel</strong><br>
+                <span>Web Developer</span>
+              </div>
+            </div>
+            <div class="approve-btn">Approve</div>
+          </div>
+
+          <div class="tutor-item">
+            <div class="tutor-left">
+              <img src="https://i.pravatar.cc/40?img=6" alt="">
+              <div>
+                <strong>Rayoh Gungret</strong><br>
+                <span>UI/UX Designer</span>
+              </div>
+            </div>
+            <div class="approve-btn">Approve</div>
+          </div>
+
+          <div class="tutor-item">
+            <div class="tutor-left">
+              <img src="https://i.pravatar.cc/40?img=7" alt="">
+              <div>
+                <strong>Azake Blossom</strong><br>
+                <span>Seamstress</span>
+              </div>
+            </div>
+            <div class="approve-btn">Approve</div>
+          </div>
+
+          <div class="tutor-item">
+            <div class="tutor-left">
+              <img src="https://i.pravatar.cc/40?img=7" alt="">
+              <div>
+                <strong>Alice godfrey</strong><br>
+                <span>Chef</span>
+              </div>
+            </div>
+            <div class="approve-btn">Approve</div>
+          </div>
+
+          <div class="tutor-item">
+            <div class="tutor-left">
+              <img src="https://i.pravatar.cc/40?img=7" alt="">
+              <div>
+                <strong>Samuel Zakar</strong><br>
+                <span>Seller</span>
+              </div>
+            </div>
+            <div class="approve-btn">Approve</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin dashboard.js"></script>
+</body>
+
+</html>

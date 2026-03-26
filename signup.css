@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2563eb;
+    padding: 30px 40px;
+    border: 1px solid black;
+}
+
+nav .top p {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+nav .link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav .link button {
+    display: flex;
+    border-radius: 15px;
+    border: none;
+}
+
+nav .link button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background: white;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.container {
+    width: 850px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .left {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(images/image1.jpg);
+    position: relative;
+}
+
+
+.container .left::before {
+    content: "";
+    width: 200px;
+    height: 40px;
+    background: #00d4ff;
+    position: absolute;
+    border-radius: 50px;
+    top: 80px;
+    left: 40px;
+    opacity: .6;
+}
+
+.container .left::after {
+    content: "";
+    width: 250px;
+    height: 40px;
+    background: #1e90ff;
+    position: absolute;
+    border-radius: 50px;
+    bottom: 100px;
+    right: 30px;
+    opacity: .5;
+}
+
+
+.container .left h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.container .left p {
+    margin-top: 10px;
+}
+
+
+.container .right {
+    width: 50%;
+    padding: 40px;
+}
+
+.container .right h2 {
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container .right p {
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container .right label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container .right .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.container .password {
+    position: relative;
+}
+
+.container .password i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: gray;
+}
+
+.container .check {
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: #2c66d6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.container .or {
+    text-align: center;
+    font-size: 12px;
+    margin: 20px 0;
+    color: gray;
+}
+
+.container .google {
+    display: flex;
+    justify-content: center;
+}
+
+.container .google img {
+    width: 35px;
+    margin-bottom: 15px;
+}
+
+.login-link a{
+    color: #464646;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">SkillSwap</div>
+            <ul class="menu">
+                <li class="active">🏠 Dashboard</li>
+                <li>📚 Courses</li>
+                <li>📅 Calendar</li>
+                <li>💳 Payment</li>
+                <li>💬 Messages</li>
+            </ul>
+
+            <ul class="menu bottom">
+                <li>⚙ Settings</li>
+                <li id="logoutBtn">↪ Logout</li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <input id="searchInput" class="search" placeholder="Search here">
+                <div class="profile">
+                    🔔
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                </div>
+            </div>
+
+            <h1>My Courses</h1>
+            <p class="subtitle">Welcome Back, Miracle</p>
+            <div class="dashboard">
+                <div class="left">
+                    <h3>My Courses</h3>
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <img src="images/IMG-20260304-WA0001.jpg" class="course-pic" alt="Sewing">
+                            <div class="course-body">
+                                <div class="course-title">Sewing</div>
+                                <div class="course-desc">
+                                    From Fabric to Fashion
+                                </div>
+                                <button class="btn">View More</button>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Sewing">
+                            <div class="course-body">
+                                <div class="course-title">Sewing</div>
+                                <div class="course-desc">
+                                    From Fabric to Fashion
+                                </div>
+                                <button class="btn">View More</button>
+                            </div>
+                        </div>
+
+                        <div class="course-card">
+                            <img src="images/IMG-20260304-WA0003.jpg" alt="">
+                            <div class="course-body">
+                                <div class="course-title">Sewing</div>
+                                <div class="course-desc">
+                                    From Fabric to Fashion
+                                </div>
+                                <button class="btn">View More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule">
+                        <div class="schedule-title">
+                            📅 Schedule
+                        </div>
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>Apr 27</td>
+                                <td>UX/UI Fundamentals</td>
+                                <td><span class="tag">UI/UX</span></td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>Apr 27</td>
+                                <td>Cooking With new recipies</td>
+                                <td><span class="tag">Cooking</span></td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td>Apr 27</td>
+                                <td>Sewing a jean skirt</td>
+                                <td><span class="tag">Sewing</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="profile-card">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Profile Picture">
+                        <h3 id="userName">James Miracle</h3>
+                        <p id="userEmail">miracle210@gmail.com</p>
+                        <div class="stats">
+                            <div>
+                                <strong>8</strong>
+                                Courses
+                            </div>
+                            <div>
+                                <strong>25</strong>
+                                Lessons
+                            </div>
+                            <div>
+                                <strong>12h</strong>
+                                Hours
+                            </div>
+                        </div>
+                        <button class="btn" style="width:100%">View More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="user-dashboard.js"></script>
+</body>
+
+</html>

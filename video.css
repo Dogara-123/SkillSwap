@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #cfd5df;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background: #f3f4f7;
+  height: 730px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu li.active {
+  background: #2d63ff;
+  color: white;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 10px;
+}
+
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.search {
+  width: 770px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #888;
+  outline: none;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.header-title {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.hero {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  height: 350px;
+}
+.hero-img {
+  flex: 3;
+}
+.hero-img img {
+  width: 100%;
+  border-radius: 10px;
+  height: 300px;
+}
+.hero-content {
+  margin-top: 10px;
+}
+
+.btn {
+  background: #2d63ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 15px;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #888;
+  padding: 8px 15px;
+  border-radius: 8px;
+  gap: 15px;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  line-height: 2.5;
+}
+.progress-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  background-color: #F2F2F2;
+  height: 300px;
+}
+
+.progress {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  height: 6px;
+  width: 40%;
+  background: #2d63ff;
+  border-radius: 5px;
+}
+.resources-card {
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  width: 650px;
+}
+.resources-card h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}

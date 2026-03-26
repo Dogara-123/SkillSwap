@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #cfd5df;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 230px;
+  background: #f3f4f7;
+  height: 720px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu li.active {
+  background: #2d63ff;
+  color: white;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 40px;
+}
+
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search {
+  width: 770px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  outline: none;
+  background-color: transparent;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.title-card {
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.title-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.about {
+  display:flex; 
+  gap:20px; 
+  margin-top:20px;
+}
+.about-card {
+  flex:2;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.skills {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.btn {
+  background: #2d63ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #888;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.course {
+  display:flex; 
+  gap:20px; 
+  margin-top:20px;
+}
+.course-title {
+  flex:2;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.course-title h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.course-card {
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  height: 220px;
+}
+
+.course-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.course-card .body {
+  padding: 10px;
+  text-align: center;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.review {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 1;
+  height: 170px;
+}
+.review img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.progress {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  height: 6px;
+  width: 40%;
+  background: #2d63ff;
+  border-radius: 5px;
+}

@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #cfd5df;
+}
+
+.container {
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search {
+  width: 800px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #888;
+  outline: none;
+  background-color: transparent;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.hero {
+  display:flex; 
+  gap:30px;
+}
+.hero-img {
+  width:520px;
+  border-radius:10px;
+  height: 280px;
+}
+.small-img {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+.hero-btn {
+  background: #2d63ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top:20px;
+}
+.course {
+  display:flex; 
+  gap:25px; 
+  margin-top:30px;
+}
+.course-card {
+  flex: 2;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.btn {
+  background: #2d63ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #888;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  line-height: 2;
+  width: 500px;
+}
+
+.review-card {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  height: 300px;
+}
+
+.review {
+  display: flex;
+  gap: 10px;
+  margin: 35px 0;
+}
+
+.review img {
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.about-card {
+  margin-top:20px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 782px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.about-card h3, h4{
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.about-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.about-list li {
+  line-height: 2;
+  font-size: 16px;
+  list-style: none;
+}
