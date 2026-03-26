@@ -2,494 +2,188 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background: #f2f2f2;
-
-}
-
-nav {
+    background: #eee;
     display: flex;
     justify-content: center;
-    align-items: center;/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #f2f2f2;
-    font-family: sans-serif; /* Added for better rendering */
-}
-
-/* --- NAVIGATION --- */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: #2563eb; /* Moved background here for consistency */
-}
-
-nav .top {
-    max-width: 1200px; /* Limits width on ultrawide screens */
-    margin: 0 auto;
-    min-height: 80px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    height: 100vh;
 }
 
-nav .top p {
+a{
     color: white;
-    font-weight: bold;
-    font-size: 20px;
-    white-space: nowrap;
-}
-
-nav .link {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav .link a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: opacity 0.3s;
-}
-
-nav .link a:hover {
-    opacity: 0.8;
-}
-
-nav .link button {
-    border-radius: 15px;
-    border: none;
-    background: white;
-    cursor: pointer;
-}
-
-nav .link button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2563eb;
     font-weight: 600;
-    width: 100px;
-    height: 40px;
-}
-
-/* --- MAIN CONTAINER --- */
-.container {
-    max-width: 850px; /* Changed width to max-width for fluidity */
-    width: 95%; 
-    display: flex;
-    margin: 40px auto;
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    min-height: 500px;
-}
-
-.container .left {
-    width: 50%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(37, 99, 235, 0.4), rgba(37, 99, 235, 0.4)), url('images/image1.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
     padding: 20px;
 }
 
-/* Decorative elements hidden on small screens for cleaner look */
-.container .left::before, .container .left::after {
-    content: "";
-    position: absolute;
-    border-radius: 50px;
-    opacity: .5;
-}
-
-.container .left::before { width: 150px; height: 30px; background: #00d4ff; top: 40px; left: 20px; }
-.container .left::after { width: 180px; height: 30px; background: #1e90ff; bottom: 40px; right: 20px; }
-
-.container .right {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Form Elements */
-.container .right h2 { margin-bottom: 5px; font-weight: 600; text-align: center; }
-.container .right p { color: gray; font-size: 13px; margin-bottom: 20px; text-align: center; }
-.container .right label { font-size: 14px; font-weight: 600; display: block; margin-bottom: 5px; }
-
-.container .input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-
-.container button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background: #2c66d6;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-/* --- MEDIA QUERIES --- */
-
-/* Tablet & Small Laptops */
-@media (max-width: 768px) {
-    nav .top {
-        padding: 10px 20px;
-    }
-    
-    .container {
-        flex-direction: column; /* Stacks image on top of form */
-        max-width: 500px;
-    }
-
-    .container .left {
-        width: 100%;
-        height: 200px; /* Give it a fixed height when stacked */
-    }
-
-    .container .left::before, .container .left::after {
-        display: none; /* Clean up the UI on mobile */
-    }
-
-    .container .right {
-        width: 100%;
-        padding: 30px;
-    }
-}
-
-/* Mobile Devices */
-@media (max-width: 480px) {
-    nav .top {
-        flex-direction: column;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    nav .link {
-        gap: 15px;
-    }
-
-    .container {
-        width: 100%;
-        margin: 0; /* Full width on tiny screens */
-        border-radius: 0;
-    }
-
-    .container .right {
-        padding: 25px 15px;
-    }
-}
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-nav .top {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2563eb;
-    padding: 30px 40px;
-    border: 1px solid black;
-}
-
-nav .top p {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-nav .link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-}
-
-nav .link a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-nav .link button {
-    display: flex;
-    border-radius: 15px;
-    border: none;
-}
-
-nav .link button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    justify-items: center;
-    background: white;
-    color: #2563eb;
-    font-size: 16px;
-    font-weight: 600;
-    width: 100px;
-    height: 40px;
-    border-radius: 15px;
-}
 
 .container {
-    width: 850px;
     display: flex;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    width: 650px;
+    height: 450px;
     background: white;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.container .left {
-    width: 50%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+.left {
+    flex: 1;
     background: url(images/image1.jpg);
     position: relative;
 }
 
 
-.container .left::before {
+.left::before,
+.left::after {
     content: "";
+    position: absolute;
+    border-radius: 50px;
+    opacity: 0.3;
+}
+
+.left::before {
     width: 200px;
-    height: 40px;
-    background: #00d4ff;
-    position: absolute;
-    border-radius: 50px;
-    top: 80px;
-    left: 40px;
-    opacity: .6;
+    height: 50px;
+    background: #2563eb;
+    top: 50px;
+    left: 30px;
 }
 
-.container .left::after {
-    content: "";
-    width: 250px;
+.left::after {
+    width: 150px;
     height: 40px;
-    background: #1e90ff;
-    position: absolute;
-    border-radius: 50px;
-    bottom: 100px;
-    right: 30px;
-    opacity: .5;
+    background: #00ffcc;
+    bottom: 60px;
+    right: 20px;
 }
 
 
-.container .left h1 {
-    font-size: 35px;
+.overlay {
+    position: absolute;
+    bottom: 200px;
+    left: 60px;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 28px;
     letter-spacing: 2px;
 }
 
-.container .left p {
+.overlay p {
     margin-top: 10px;
-}
-
-
-.container .right {
-    width: 50%;
-    padding: 40px;
-}
-
-.container .right h2 {
-    margin-bottom: 5px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.container .right p {
-    color: gray;
-    font-size: 12px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.container .right label{
     font-size: 14px;
-    font-weight: 600;
 }
 
-.container .right .input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+
+.right {
+    flex: 1;
+    padding: 90px 40px;
+    text-align: center;
 }
 
-.container .password {
-    position: relative;
+.right h2 {
+    margin-bottom: 10px;
 }
 
-.container .password i {
-    position: absolute;
-    right: 10px;
-    top: 12px;
+.right p {
+    margin-bottom: 30px;
     color: gray;
 }
 
-.container .check {
-    font-size: 12px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-}
 
-.container button {
+.btn {
+    display: block;
     width: 100%;
-    padding: 10px;
-    background: #2c66d6;
-    border: none;
+    padding: 12px;
+    margin: 10px 0;
+    background: #2563eb;
     color: white;
+    border: none;
     border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-
-.container .or {
-    text-align: center;
-    font-size: 12px;
-    margin: 20px 0;
-    color: gray;
-}
-
-.container .google {
-    display: flex;
-    justify-content: center;
-}
-
-.container .google img {
-    width: 35px;
-    margin-bottom: 15px;
-}
-
-.login-link a{
-    color: #464646;
+.btn:hover {
+    background: #2563eb;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  nav .top {
-    height: auto;
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav .link {
-    gap: 15px;
-  }
-
   .container {
-    width: 90vw;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    flex-direction: column;
-    border-radius: 8px;
-  }
-
-  .container .left {
-    display: none;
-  }
-
-  .container .right {
     width: 100%;
-    padding: 30px 20px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+    min-height: 100vh;
   }
 
-  .container .right h2 {
+  .left {
+    min-height: 200px;
+  }
+
+  .overlay {
+    bottom: 50px;
+    left: 20px;
+  }
+
+  .overlay h1 {
     font-size: 20px;
   }
 
-  .container button {
-    padding: 8px;
+  .overlay p {
+    font-size: 12px;
+  }
+
+  .left::before,
+  .left::after {
+    display: none;
+  }
+
+  .right {
+    padding: 40px 20px;
+  }
+
+  .right h2 {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  nav {
-    padding: 0;
-  }
-
-  nav .top {
-    padding: 10px 15px;
-  }
-
-  nav .top p {
-    font-size: 16px;
-  }
-
-  nav .link {
-    gap: 8px;
-  }
-
-  nav .link button a {
-    width: 80px;
-    height: 35px;
-    font-size: 14px;
-  }
-
   .container {
     width: 100%;
-    border-radius: 0;
-    margin: 15px 0;
   }
 
-  .container .right {
-    padding: 20px 15px;
+  .right {
+    padding: 30px 15px;
   }
 
-  .container .right h2 {
+  .overlay {
+    bottom: 30px;
+    left: 10px;
+  }
+
+  .overlay h1 {
     font-size: 18px;
+    letter-spacing: 1px;
   }
 
-  .container .input {
-    padding: 8px !important;
+  a {
+    padding: 10px;
     font-size: 14px;
   }
-
-  .container .check {
-    font-size: 11px;
-  }
-
-  .container .google img {
-    width: 30px;
-  }
 }
+
+
