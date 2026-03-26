@@ -12,7 +12,126 @@
     width: 90vw;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;/* --- Desktop & Base Styles --- */
+.container {
+    /* Use max-width so it never gets too big, 
+       but width: 95% so it shrinks on tablets */
+    max-width: 850px;
+    width: 95%; 
+    display: flex;
+    margin: 40px auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    min-height: 550px; /* Ensures a consistent look */
+}
+
+.container .left {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 20px;
+}
+
+.container .right {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .right h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container .right .input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px; /* Reduced slightly for better balance */
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+}
+
+/* --- Tablets & Small Laptops (Step 1) --- */
+@media (max-width: 860px) {
+    .container {
+        width: 90%;
+        min-height: auto;
+    }
+    
+    .container .right {
+        padding: 30px;
+    }
+}
+
+/* --- Mobile Landscape / Large Phones (Step 2) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the image on top of the form */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .container .left {
+        width: 100%;
+        height: 180px; /* Show a small banner version of the image */
+        padding: 20px;
+    }
+
+    /* If you want to hide the image entirely like your previous code:
+       .container .left { display: none; } 
+    */
+
+    .container .right {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .container .right h2 {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+}
+
+/* --- Small Phones (Step 3) --- */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0; /* Full-screen look on tiny devices */
+    }
+
+    .container .right {
+        padding: 25px 15px;
+    }
+
+    .container .right h2 {
+        font-size: 20px;
+    }
+
+    .container .input {
+        padding: 10px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .container button {
+        padding: 12px; /* Keep buttons large enough for thumbs! */
+    }
+}
     min-height: auto;
   }
 
