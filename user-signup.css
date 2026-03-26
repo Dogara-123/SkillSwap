@@ -1,173 +1,103 @@
-/* 1. Global Reset & Body */
+/* --- Global Reset --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* This prevents padding from breaking widths */
+    box-sizing: border-box; /* Crucial: Prevents padding from breaking layout */
 }
 
 body {
     background: #f2f2f2;
     font-family: sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* 2. Navigation - Made Fluid */
+/* --- Navigation --- */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    background: #2563eb;
     position: sticky;
     top: 0;
-    z-index: 10;
-    background: #2563eb; /* Move background here for continuity */
-    width: 100%;
+    z-index: 100;
 }
 
 nav .top {
-    width: 100%;
-    max-width: 1200px; /* Limits width on big screens */
-    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-}
-
-nav .top p {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+    padding: 15px 5%; /* Use percentages for spacing */
+    min-height: 70px;
 }
 
 nav .link {
     display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 30px;
 }
 
-nav .link a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-}
-
-nav .link button {
-    background: white;
-    border-radius: 15px;
-    border: none;
-    overflow: hidden;
-}
-
-nav .link button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2563eb;
-    font-weight: 600;
-    width: 100px;
-    height: 40px;
-}
-
-/* 3. The Container - The "Anti-Scattering" Fix */
+/* --- Container (The fix for scattering) --- */
 .container {
-    max-width: 850px; /* Changed from width to max-width */
-    width: 95%;      /* Allow it to be smaller than 850px on tablets */
     display: flex;
-    margin: 40px auto;
+    flex-direction: row; /* Side by side on desktop */
+    max-width: 900px;
+    width: 95%; /* Shrinks to fit screen */
+    margin: 30px auto;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    min-height: 500px; 
 }
 
-/* 4. Left Section (Image) */
+/* Left Side - Image */
 .container .left {
-    flex: 1; /* Automatically takes up 50% */
+    flex: 1; /* Takes 50% */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/image1.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(images/image1.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 20px;
-}
-
-/* Decorative shapes - Hidden on mobile later for space */
-.container .left::before, .container .left::after {
-    content: "";
-    position: absolute;
-    border-radius: 50px;
-    opacity: .6;
-}
-.container .left::before { width: 150px; height: 35px; background: #00d4ff; top: 40px; left: 20px; }
-.container .left::after { width: 180px; height: 35px; background: #1e90ff; bottom: 40px; right: 20px; }
-
-/* 5. Right Section (Form) */
-.container .right {
-    flex: 1; /* Automatically takes up 50% */
     padding: 40px;
+    position: relative;
 }
 
-.container .right h2 { margin-bottom: 5px; text-align: center; }
-.container .right p { color: gray; font-size: 12px; margin-bottom: 20px; text-align: center; }
-
-.container .right label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
+/* Right Side - Form */
+.container .right {
+    flex: 1; /* Takes 50% */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container .right .input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 16px; /* Prevents auto-zoom on iPhones */
-}
-
-.container .check { display: flex; gap: 10px; font-size: 12px; margin-bottom: 20px; }
-
-.container button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background: #2c66d6;
-    border: none;
-    color: white;
     border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
+    font-size: 16px; /* Prevents auto-zoom on mobile */
 }
 
-.container .or { text-align: center; font-size: 12px; margin: 20px 0; color: gray; }
-.container .google { display: flex; justify-content: center; }
-.container .google img { width: 35px; cursor: pointer; }
-
-/* --- 6. Mobile Responsiveness --- */
-
-@media (max-width: 768px) {
-    nav .top {
-        padding: 15px 20px;
-    }
-    
-    nav .link { gap: 15px; }
-
+/* --- Tablet & Mobile (The Breakpoint) --- */
+@media (max-width: 800px) {
     .container {
-        flex-direction: column; /* Stack image on top of form */
-        margin-top: 20px;
+        flex-direction: column; /* Stack vertically! */
+        width: 90%;
+        margin: 20px auto;
     }
 
     .container .left {
         width: 100%;
-        min-height: 200px; /* Show part of the image as a header */
+        height: 200px; /* Instead of 50% width, it gets 200px height */
+        padding: 20px;
     }
-    
+
+    /* Hide decorative blobs on mobile to save space */
     .container .left::before, .container .left::after {
-        display: none; /* Remove floating shapes on mobile */
+        display: none;
     }
 
     .container .right {
@@ -176,11 +106,12 @@ nav .link button a {
     }
 }
 
+/* --- Tiny Phones --- */
 @media (max-width: 480px) {
     nav .top {
         flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        padding: 10px;
+        gap: 10px;
     }
 
     .container {
@@ -188,6 +119,4 @@ nav .link button a {
         border-radius: 0;
         margin: 0;
     }
-
-    .container .right h2 { font-size: 22px; }
 }
