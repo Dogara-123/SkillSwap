@@ -1,122 +1,495 @@
-/* --- Global Reset --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Crucial: Prevents padding from breaking layout */
+    box-sizing: border-box;
 }
 
 body {
     background: #f2f2f2;
-    font-family: sans-serif;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+
 }
 
-/* --- Navigation --- */
 nav {
-    width: 100%;
-    background: #2563eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: sans-serif; /* Added for better rendering */
+}
+
+/* --- NAVIGATION --- */
+nav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
+    background: #2563eb; /* Moved background here for consistency */
 }
 
 nav .top {
+    max-width: 1200px; /* Limits width on ultrawide screens */
+    margin: 0 auto;
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%; /* Use percentages for spacing */
-    min-height: 70px;
+    padding: 10px 40px;
+}
+
+nav .top p {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
 }
 
 nav .link {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 30px;
 }
 
-/* --- Container (The fix for scattering) --- */
-.container {
+nav .link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+nav .link a:hover {
+    opacity: 0.8;
+}
+
+nav .link button {
+    border-radius: 15px;
+    border: none;
+    background: white;
+    cursor: pointer;
+}
+
+nav .link button a {
     display: flex;
-    flex-direction: row; /* Side by side on desktop */
-    max-width: 900px;
-    width: 95%; /* Shrinks to fit screen */
-    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+    color: #2563eb;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    max-width: 850px; /* Changed width to max-width for fluidity */
+    width: 95%; 
+    display: flex;
+    margin: 40px auto;
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    min-height: 500px; 
+    min-height: 500px;
 }
 
-/* Left Side - Image */
 .container .left {
-    flex: 1; /* Takes 50% */
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/image1.jpg');
-    background-size: cover;
-    background-position: center;
+    width: 50%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    text-align: center;
+    background: linear-gradient(rgba(37, 99, 235, 0.4), rgba(37, 99, 235, 0.4)), url('images/image1.jpg');
+    background-size: cover;
+    background-position: center;
     position: relative;
+    padding: 20px;
 }
 
-/* Right Side - Form */
+/* Decorative elements hidden on small screens for cleaner look */
+.container .left::before, .container .left::after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    opacity: .5;
+}
+
+.container .left::before { width: 150px; height: 30px; background: #00d4ff; top: 40px; left: 20px; }
+.container .left::after { width: 180px; height: 30px; background: #1e90ff; bottom: 40px; right: 20px; }
+
 .container .right {
-    flex: 1; /* Takes 50% */
+    width: 50%;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.container .right .input {
+/* Form Elements */
+.container .right h2 { margin-bottom: 5px; font-weight: 600; text-align: center; }
+.container .right p { color: gray; font-size: 13px; margin-bottom: 20px; text-align: center; }
+.container .right label { font-size: 14px; font-weight: 600; display: block; margin-bottom: 5px; }
+
+.container .input {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px; /* Prevents auto-zoom on mobile */
+    border: 1px solid #ccc;
+    outline: none;
 }
 
-/* --- Tablet & Mobile (The Breakpoint) --- */
-@media (max-width: 800px) {
+.container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #2c66d6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet & Small Laptops */
+@media (max-width: 768px) {
+    nav .top {
+        padding: 10px 20px;
+    }
+    
     .container {
-        flex-direction: column; /* Stack vertically! */
-        width: 90%;
-        margin: 20px auto;
+        flex-direction: column; /* Stacks image on top of form */
+        max-width: 500px;
     }
 
     .container .left {
         width: 100%;
-        height: 200px; /* Instead of 50% width, it gets 200px height */
-        padding: 20px;
+        height: 200px; /* Give it a fixed height when stacked */
     }
 
-    /* Hide decorative blobs on mobile to save space */
     .container .left::before, .container .left::after {
-        display: none;
+        display: none; /* Clean up the UI on mobile */
     }
 
     .container .right {
         width: 100%;
-        padding: 30px 20px;
+        padding: 30px;
     }
 }
 
-/* --- Tiny Phones --- */
+/* Mobile Devices */
 @media (max-width: 480px) {
     nav .top {
         flex-direction: column;
-        padding: 10px;
-        gap: 10px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav .link {
+        gap: 15px;
     }
 
     .container {
         width: 100%;
+        margin: 0; /* Full width on tiny screens */
         border-radius: 0;
-        margin: 0;
     }
+
+    .container .right {
+        padding: 25px 15px;
+    }
+}
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2563eb;
+    padding: 30px 40px;
+    border: 1px solid black;
+}
+
+nav .top p {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+}
+
+nav .link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav .link button {
+    display: flex;
+    border-radius: 15px;
+    border: none;
+}
+
+nav .link button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    background: white;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.container {
+    width: 850px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container .left {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(images/image1.jpg);
+    position: relative;
+}
+
+
+.container .left::before {
+    content: "";
+    width: 200px;
+    height: 40px;
+    background: #00d4ff;
+    position: absolute;
+    border-radius: 50px;
+    top: 80px;
+    left: 40px;
+    opacity: .6;
+}
+
+.container .left::after {
+    content: "";
+    width: 250px;
+    height: 40px;
+    background: #1e90ff;
+    position: absolute;
+    border-radius: 50px;
+    bottom: 100px;
+    right: 30px;
+    opacity: .5;
+}
+
+
+.container .left h1 {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.container .left p {
+    margin-top: 10px;
+}
+
+
+.container .right {
+    width: 50%;
+    padding: 40px;
+}
+
+.container .right h2 {
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container .right p {
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container .right label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.container .right .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.container .password {
+    position: relative;
+}
+
+.container .password i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: gray;
+}
+
+.container .check {
+    font-size: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: #2c66d6;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.container .or {
+    text-align: center;
+    font-size: 12px;
+    margin: 20px 0;
+    color: gray;
+}
+
+.container .google {
+    display: flex;
+    justify-content: center;
+}
+
+.container .google img {
+    width: 35px;
+    margin-bottom: 15px;
+}
+
+.login-link a{
+    color: #464646;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav .top {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav .link {
+    gap: 15px;
+  }
+
+  .container {
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .container .left {
+    display: none;
+  }
+
+  .container .right {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .container .right h2 {
+    font-size: 20px;
+  }
+
+  .container button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0;
+  }
+
+  nav .top {
+    padding: 10px 15px;
+  }
+
+  nav .top p {
+    font-size: 16px;
+  }
+
+  nav .link {
+    gap: 8px;
+  }
+
+  nav .link button a {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 0;
+    margin: 15px 0;
+  }
+
+  .container .right {
+    padding: 20px 15px;
+  }
+
+  .container .right h2 {
+    font-size: 18px;
+  }
+
+  .container .input {
+    padding: 8px !important;
+    font-size: 14px;
+  }
+
+  .container .check {
+    font-size: 11px;
+  }
+
+  .container .google img {
+    width: 30px;
+  }
 }
