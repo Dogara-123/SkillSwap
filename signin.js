@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (email === savedUser.email && password === savedUser.password) {
             alert("Login successful 🎉");
 
-            window.location.href = "user-dashboard.html";
+            window.location.href = "tutor-dashboard.html";
         } else {
             alert("Invalid email or password");
         }

@@ -1,4 +1,3 @@
-
 // 1. Initialize Supabase correctly
 // Make sure the URL does NOT have a capital 'L' at the end
 const supabaseUrl = 'https://vnsbpedtrrlvbrcmuiez.supabase.co'; 
